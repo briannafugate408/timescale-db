@@ -10,9 +10,9 @@ Utilizes a worker pool to execute queries concurrently.
 Outputs benchmarking statistics, including total processing time, minimum, median, average, and maximum query times.
 
 ## Prerequisites
-Go (1.22 or later)
-Docker (for running TimescaleDB)
-A TimescaleDB instance running (local or remote)
+- Go (1.22 or later)
+- Docker (for running TimescaleDB)
+- A TimescaleDB instance running (local or remote)
 
 ## Setup Instructions
 1. Clone the Repository:
