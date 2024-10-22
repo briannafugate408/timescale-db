@@ -26,7 +26,8 @@ Outputs benchmarking statistics, including total processing time, minimum, media
 4. Make sure Docker Daemon is running
 
 5. Build Docker container (feel free to use these variables below or edit your own)
-   ``` docker build --build-arg DB_HOST=timescaledb \
+   ```
+   docker build --build-arg DB_HOST=timescaledb \
              --build-arg DB_PORT=5432 \
              --build-arg DB_USER=postgres \
              --build-arg DB_PASSWORD=password \
