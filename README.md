@@ -11,8 +11,10 @@ Outputs benchmarking statistics, including total processing time, minimum, media
 
 ## Prerequisites
 - Go (1.22 or later)
+  Docs: https://go.dev/
 - Docker (for running TimescaleDB)
 - A TimescaleDB instance running (local or remote)
+  Docs: https://docs.timescale.com/self-hosted/latest/install/installation-macos/
 
 ## Setup Instructions
 1. Clone the Repository:
