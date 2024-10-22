@@ -16,29 +16,35 @@ Outputs benchmarking statistics, including total processing time, minimum, media
 
 ## Setup Instructions
 1. Clone the Repository:
-` git clone https://github.com/briannafugate408/timescale-db.git`
 
-2. Navigate to `timescale_homework_go` in your local instance of the repository
+   ` git clone https://github.com/briannafugate408/timescale-db.git`
 
-3. Build the Application
-`go build -o bin/timescale_homework_go`
+3. Navigate to `timescale_homework_go` in your local instance of the repository
 
-4. Make sure Docker Daemon is running
+4. Build the Application:
 
-5. Build Docker container (feel free to use these variables below or edit your own)
-   ```
-   docker build --build-arg DB_HOST=timescaledb \
+   `go build -o bin/timescale_homework_go`
+
+5. Make sure Docker Daemon is running
+
+6. Build Docker container (feel free to use these variables below or edit your own):
+
+    ```
+      docker build --build-arg DB_HOST=timescaledb \
              --build-arg DB_PORT=5432 \
              --build-arg DB_USER=postgres \
              --build-arg DB_PASSWORD=password \
              --build-arg DB_NAME=homework \
              -t timescale_homework_go .
 
-6. Run Docker container for timescaleDB
-   `docker run -d --name timescaledb -p 5432:5432 -e POSTGRES_PASSWORD=password timescale/timescaledb-ha:pg16`
-7. Link app to timescaleDB container
+7. Run Docker container for timescaleDB:
+
+      `docker run -d --name timescaledb -p 5432:5432 -e POSTGRES_PASSWORD=password timescale/timescaledb-ha:pg16`
+8. Link app to timescaleDB container:
+
    `docker run -it --name app --link timescaledb:timescaledb timescale_homework_go`
-8. Enter the number of workers you would like to use (e.g. 4)
+   
+9. Enter the number of workers you would like to use (e.g. 4)
 
 ## Application Logic
 1. Database Connection: The application connects to the TimescaleDB instance using environment variables.
